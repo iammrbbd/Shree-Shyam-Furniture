@@ -21,9 +21,10 @@ const products = [
         description: "Modern modular kitchen solutions with premium hardware",
         images: [
             "https://pplx-res.cloudinary.com/image/upload/v1754649082/pplx_project_search_images/06895cc68e21bfe550dd4aeb936f4a67ce7fabc1.png",
-            "image/kitchen/040422111524R_18.webp",
-            "image/kitchen/040422111728R_19.webp",
-            "image/kitchen/180123120503DSC02028_29_30_Enhancer.webp",
+            "https://res.cloudinary.com/dadjouvur/image/upload/v1757919717/180123120725DSC02127_8_9_Enhancer_tjyeo4.webp",
+            "https://res.cloudinary.com/dadjouvur/image/upload/v1757919717/R_xgtddi.jpg",
+            "https://res.cloudinary.com/dadjouvur/image/upload/v1757919717/180123121004DSC02230_1_2_Enhancer_y43kef.webp",
+            "image/kitchen/040422113517R_35.webp",
             "image/kitchen/040422113517R_35.webp",
             "image/kitchen/040422113806R_55.webp",
             "image/kitchen/040423022658ModularKitchen.webp",
@@ -960,4 +961,5 @@ window.closeServiceModal = closeServiceModal;
 window.changeMainImage = changeMainImage;
 window.clearSearch = clearSearch;
 window.viewCatalog = viewCatalog;
+
 window.downloadCatalog = downloadCatalog;
