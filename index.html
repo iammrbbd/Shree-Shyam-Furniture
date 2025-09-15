@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Shyam Furniture - Premium Furniture Store in Sikar | Custom Wooden Furniture</title>
+    <meta name="description" content="Shree Shyam Furniture in Sikar offers premium custom wooden furniture including wardrobes, kitchen cabinets, TV units, office furniture. 20+ years experience, 1000+ sites completed.">
+    <meta name="keywords" content="furniture store Sikar, custom furniture near me, wooden furniture Rajasthan, modular kitchen Sikar, furniture repair services, office furniture Sikar">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <h2 class="nav__logo">Shree Shyam Furniture</h2>
+                <span class="nav__subtitle">Premium Wooden Furniture</span>
+            </div>
+            
+            <div class="nav__search">
+                <input type="text" class="search__input" placeholder="Search products..." id="searchInput">
+                <button class="search__btn" id="searchBtn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#products" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#catalog" class="nav__link">Catalog</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Premium Wooden Furniture</h1>
+                    <p class="hero__subtitle">Crafted with Excellence in Sikar</p>
+                    <p class="hero__description">Transform your space with our custom-made furniture. Over 20 years of craftsmanship, serving 1000+ satisfied customers across Sikar and nearby areas.</p>
+                    <div class="hero__buttons">
+                        <button class="btn btn--primary" onclick="scrollToSection('products')">Explore Products</button>
+                        <button class="btn btn--outline" onclick="scrollToSection('contact')">Get Quote</button>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1754998062/pplx_project_search_images/17bf2f53b54cba5e6b76d3507fb5ebcf7479844e.png" alt="Premium Wooden Wardrobes" class="hero__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Our Products & Services</h2>
+                    <p class="section__subtitle">Discover our wide range of premium wooden furniture</p>
+                </div>
+
+                <div class="products__carousel">
+                    <button class="carousel__btn carousel__btn--prev" id="prevBtn">‹</button>
+                    <div class="carousel__container">
+                        <div class="carousel__track" id="carouselTrack">
+                            <!-- Product cards will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+                    <button class="carousel__btn carousel__btn--next" id="nextBtn">›</button>
+                </div>
+
+                <div class="products__grid hidden" id="productsGrid">
+                    <!-- All products will be shown here when "View All" is clicked -->
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn--primary" id="viewAllBtn">View All Products</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="services__content">
+                    <div class="services__info">
+                        <h2 class="section__title">Professional Repair Services</h2>
+                        <p class="section__description">We provide comprehensive furniture repair and maintenance services. Our expert craftsmen ensure your furniture looks and functions like new.</p>
+                        <ul class="services__features">
+                            <li>On-site repair services</li>
+                            <li>Furniture restoration</li>
+                            <li>Hardware replacement</li>
+                            <li>Wood polishing & refinishing</li>
+                        </ul>
+                        <button class="btn btn--primary" onclick="openServiceModal()">Book a Service</button>
+                    </div>
+                    <div class="services__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1757840210/pplx_project_search_images/b1632cd4ff376f047d8dc8ea5f9841e28d70bfe3.png" alt="Professional Furniture Services">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Catalog Section -->
+        <section class="catalog" id="catalog">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Product Catalog</h2>
+                    <p class="section__subtitle">Browse our comprehensive collection of designs, patterns and color options</p>
+                </div>
+                
+                <div class="catalog__grid" id="catalogGrid">
+                    <!-- PDF catalogs will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose" id="about">
+            <div class="container">
+                <h2 class="section__title">Why Choose Us</h2>
+                <div class="why-choose__grid">
+                    <div class="feature__card">
+                        <div class="feature__icon">🏗️</div>
+                        <h3>On-site Manufacturing</h3>
+                        <p>We work and manufacture directly on-site for perfect fit</p>
+                    </div>
+                    <div class="feature__card">
+                        <div class="feature__icon">⭐</div>
+                        <h3>High-Quality Materials</h3>
+                        <p>Only premium grade materials used in all our products</p>
+                    </div>
+                    <div class="feature__card">
+                        <div class="feature__icon">📅</div>
+                        <h3><span class="counter" data-target="20">0</span>+ Years Experience</h3>
+                        <p>Over two decades of craftsmanship and expertise</p>
+                    </div>
+                    <div class="feature__card">
+                        <div class="feature__icon">🏠</div>
+                        <h3><span class="counter" data-target="1000">0</span>+ Sites Completed</h3>
+                        <p>Successfully completed projects across the region</p>
+                    </div>
+                    <div class="feature__card">
+                        <div class="feature__icon">💰</div>
+                        <h3>Affordable Rates</h3>
+                        <p>Competitive pricing without compromising on quality</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners">
+            <div class="container">
+                <h2 class="section__title">Our Partners</h2>
+                <div class="partners__grid">
+                    <div class="partner__card">
+                        <h3>Kaka</h3>
+                        <p>Premium hardware supplier</p>
+                    </div>
+                    <div class="partner__card">
+                        <h3>Real (Plast/Gold)</h3>
+                        <p>Quality laminate provider</p>
+                    </div>
+                    <div class="partner__card">
+                        <h3>Decor Plast</h3>
+                        <p>Decorative surface solutions</p>
+                    </div>
+                    <div class="partner__card">
+                        <h3>Tree Plast</h3>
+                        <p>Sustainable material supplier</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <h2 class="section__title">Contact Us</h2>
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <span class="contact__icon">📧</span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:shreeshyamfurniturehouse@gmail.com" class="contact__link contact__link--email">
+                                        shreeshyamfurniturehouse@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon">📱</span>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <a href="tel:+919116974132" class="contact__link contact__link--phone">
+                                        +91 9116974132
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon">📍</span>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Sikar + nearby 60 km radius</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__actions">
+                            <h4>Quick Contact</h4>
+                            <div class="contact__buttons">
+                                <a href="tel:+919116974132" class="contact__btn contact__btn--call">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                    Call Now
+                                </a>
+                                <a href="mailto:shreeshyamfurniturehouse@gmail.com" class="contact__btn contact__btn--email">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="m4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                    Send Email
+                                </a>
+                                <a href="https://wa.me/919116974132?text=Hello%20Shree%20Shyam%20Furniture,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+                                   target="_blank" class="contact__btn contact__btn--whatsapp">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                    </svg>
+                                    WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form" id="contactForm">
+                        <h3>Get in Touch</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Your Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Shree Shyam Furniture</h3>
+                    <p>Premium wooden furniture crafted with excellence for over 20 years in Sikar and surrounding areas.</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#catalog">Catalog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Contact Info</h4>
+                    <p><a href="mailto:shreeshyamfurniturehouse@gmail.com">shreeshyamfurniturehouse@gmail.com</a></p>
+                    <p><a href="tel:+919116974132">+91 9116974132</a></p>
+                    <p>Sikar, Rajasthan</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Shree Shyam Furniture. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal hidden" id="productModal">
+        <div class="modal__content">
+            <span class="modal__close" onclick="closeModal()">&times;</span>
+            <div class="modal__body" id="modalBody">
+                <!-- Product details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Booking Modal -->
+    <div class="modal hidden" id="serviceModal">
+        <div class="modal__content">
+            <span class="modal__close" onclick="closeServiceModal()">&times;</span>
+            <div class="modal__body">
+                <h3>Book a Repair Service</h3>
+                <form id="serviceForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="2" placeholder="Your Address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Contact Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Problem Description" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Book Service</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
